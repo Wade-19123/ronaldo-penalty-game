@@ -1,0 +1,15 @@
+{
+  "name": "ronaldo-penalty-game",
+  "version": "1.0.0",
+  "description": "A small soccer field video game built with Express and vanilla frontend code.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

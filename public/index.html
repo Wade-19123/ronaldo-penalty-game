@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ronaldo Penalty Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="home-screen" class="screen home-screen active" aria-label="Game home">
+        <div class="home-orbit" aria-hidden="true"></div>
+        <div class="home-noise" aria-hidden="true"></div>
+        <div class="home-panel">
+          <span class="home-kicker">Champions Arcade Presents</span>
+          <h1>SIUUU<br />Penalty Lab</h1>
+          <p>Enter the box, trigger the clip, survive the 60/40 referee universe.</p>
+          <button id="enter-button" class="enter-button" type="button">Enter Match</button>
+        </div>
+        <div class="home-stats" aria-label="Game probabilities">
+          <span>Base Penalty <strong>60%</strong></span>
+          <span>Appeal Boost <strong>70%</strong></span>
+          <span>Chaos Path <strong>40%</strong></span>
+        </div>
+      </section>
+
+      <section id="field-screen" class="screen" aria-label="Soccer field">
+        <div class="field-lights" aria-hidden="true"></div>
+        <div class="stadium-noise" aria-hidden="true"></div>
+
+        <div class="broadcast-card">
+          <span class="live-dot"></span>
+          <span>Live Penalty Feed</span>
+          <strong>60 / 40 Fate Engine</strong>
+        </div>
+
+        <div class="mode-badge" aria-label="Siuuu mode">
+          <span class="mode-icon">S</span>
+          <strong>SIUUU MODE</strong>
+        </div>
+
+        <div class="scoreboard">
+          <span>Penalty Moment</span>
+          <strong>Click Ronaldo To Enter</strong>
+        </div>
+
+        <button id="player" class="player" type="button" aria-label="Start game by clicking the player">
+          <img src="assets/ronaldo-player.png" alt="Ronaldo player" />
+        </button>
+
+        <div class="penalty-spot" aria-hidden="true"></div>
+        <div class="start-hint">Tap the player in the box</div>
+      </section>
+
+      <section id="media-screen" class="screen media-screen" aria-live="polite">
+        <div id="cinema-flash" class="cinema-flash" aria-hidden="true"></div>
+        <div id="stage-label" class="stage-label">Kickoff</div>
+        <div id="var-overlay" class="var-overlay" aria-hidden="true">
+          <span>VAR CHECK</span>
+          <strong>Decision Loading</strong>
+        </div>
+        <div id="appeal-panel" class="appeal-panel" aria-hidden="true">
+          <span>Referee Pressure</span>
+          <strong>Appeal for the penalty?</strong>
+          <p>Appeal raises the penalty chance to 70%. Staying silent keeps the original 60% chaos engine.</p>
+          <div class="appeal-actions">
+            <button class="appeal-choice" type="button" data-choice="appeal">Appeal</button>
+            <button class="appeal-choice" type="button" data-choice="silent">Stay Silent</button>
+          </div>
+        </div>
+        <video id="game-video" class="full-media" playsinline></video>
+        <img id="result-image" class="full-media" alt="Penalty result" />
+        <button id="skip-button" class="skip-button" type="button" aria-label="Toggle 2x speed">2x Speed</button>
+      </section>
+
+      <section id="shootout-screen" class="screen shootout-screen" aria-label="Penalty shootout">
+        <div class="shootout-bg" aria-hidden="true"></div>
+        <div class="shootout-hud">
+          <span>Penalty Shootout</span>
+          <strong>Click left or right side of the goal</strong>
+        </div>
+        <button class="goal-zone goal-left" type="button" data-shot="left" aria-label="Shoot left">Left</button>
+        <button class="goal-zone goal-right" type="button" data-shot="right" aria-label="Shoot right">Right</button>
+        <div id="mosaic-result" class="mosaic-result" aria-live="polite">
+          <strong id="mosaic-text">GOAL!!!</strong>
+        </div>
+      </section>
+
+      <section id="end-screen" class="screen end-screen">
+        <div class="end-panel">
+          <span id="ending-kicker" class="ending-kicker">Final Whistle</span>
+          <h1 id="ending-title">Game Over</h1>
+          <p id="ending-copy">The penalty universe has spoken.</p>
+          <button id="restart-button" type="button">Restart Game</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
