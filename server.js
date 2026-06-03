@@ -3,7 +3,7 @@ const http = require("http");
 const path = require("path");
 
 const PORT = process.env.PORT || 3000;
-const HOST = "127.0.0.1";
+const HOST = process.env.HOST || "0.0.0.0";
 const publicDir = path.join(__dirname, "public");
 
 function getContentType(filePath) {
@@ -44,7 +44,7 @@ function startFallbackServer() {
   });
 
   server.listen(PORT, HOST, () => {
-    console.log(`Ronaldo penalty game running at http://localhost:${PORT}`);
+    console.log(`Ronaldo penalty game running on ${HOST}:${PORT}`);
     console.log("Express is not installed, so the built-in Node server is being used.");
   });
 }
@@ -62,7 +62,7 @@ try {
   });
 
   app.listen(PORT, HOST, () => {
-    console.log(`Ronaldo penalty game running at http://localhost:${PORT}`);
+    console.log(`Ronaldo penalty game running on ${HOST}:${PORT}`);
   });
 } catch (error) {
   if (error.code !== "MODULE_NOT_FOUND") {
